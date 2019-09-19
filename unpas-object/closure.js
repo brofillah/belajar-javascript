@@ -17,16 +17,38 @@
 
 
 
-function ucapkanSalam(waktu) {
- return function (nama) {
-  console.log(`Halo ${nama}, Selamat ${waktu}, semoga harimu menyenangkan!`);
+// function ucapkanSalam(waktu) {
+//  return function (nama) {
+//   console.log(`Halo ${nama}, Selamat ${waktu}, semoga harimu menyenangkan!`);
 
+//  }
+// }
+
+// let selamatPagi = ucapkanSalam('Pagi')
+// let selamatSiang = ucapkanSalam('Siang')
+// let selamatMalam = ucapkanSalam('Malam')
+
+// selamatPagi('Farhan')
+// selamatMalam('Galih')
+
+
+
+
+
+
+let add = (function() {
+ let counter = 0
+ return  function () {
+  return ++counter
  }
-}
+})()
 
-let selamatPagi = ucapkanSalam('Pagi')
-let selamatSiang = ucapkanSalam('Siang')
-let selamatMalam = ucapkanSalam('Malam')
+counter = 100
 
-selamatPagi('Farhan')
-selamatMalam('Galih')
+
+console.log(add());
+console.log(add());
+console.log(add());
+console.log(add());
+console.log(add());
+console.log(add());
