@@ -29,3 +29,4 @@ let selamatSiang = ucapkanSalam('Siang')
 let selamatMalam = ucapkanSalam('Malam')
 
 selamatPagi('Farhan')
+selamatMalam('Galih')
