@@ -1,10 +1,31 @@
-function init() {
- let nama = 'Farhan'
+// function init() {
+//  // let nama = 'Farhan'
 
- function tampilNama() {
-  console.log(nama)
+//  return function (nama) {
+//   console.log(nama)
+//  }
+
+// }
+
+// let panggilNama = init()
+// panggilNama('Farhan')
+// panggilNama('Yudhi')
+
+
+
+
+
+
+
+function ucapkanSalam(waktu) {
+ return function (nama) {
+  console.log(`Halo ${nama}, Selamat ${waktu}, semoga harimu menyenangkan!`);
+
  }
-
 }
 
-init()
+let selamatPagi = ucapkanSalam('Pagi')
+let selamatSiang = ucapkanSalam('Siang')
+let selamatMalam = ucapkanSalam('Malam')
+
+selamatPagi('Farhan')
