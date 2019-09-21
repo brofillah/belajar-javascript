@@ -45,7 +45,7 @@ function isPalindrome(str) {
 function reverseInt(int) {
   const revString = int.toString().split('').reverse().join('')
 
-  return revString
+  return parseInt(revString)
 }
 
 
