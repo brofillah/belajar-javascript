@@ -41,10 +41,17 @@ function isPalindrome(str) {
   return revString === str
 }
 
+// membalikkan angka
+function reverseInt(int) {
+  const revString = int.toString().split('').reverse().join('')
+
+  return revString
+}
+
 
 
 
 // console.log(reverseString("hello"));
-console.log(isPalindrome('racecar'))
-console.log(isPalindrome('hello'))
-
+// console.log(isPalindrome('racecar'))
+// console.log(isPalindrome('hello'))
+console.log(reverseInt(521))
