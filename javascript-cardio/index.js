@@ -65,12 +65,15 @@ function capitalizeLatters(str) {
 
   ////////////////////////////////////////////////////////////////////
 
-  return str
-  .toLowerCase()
-  .split(" ")
-  .map(word => word[0].toUpperCase() + word.substr(1))
-  .join(' ')
+  // return str
+  // .toLowerCase()
+  // .split(" ")
+  // .map(word => word[0].toUpperCase() + word.substr(1))
+  // .join(' ')
   
+  ////////////////////////////////////////////////////////////////////
+
+  return str.replace(/\b[a-z]/gi, char => char.toUpperCase())
 }
 
 // console.log(reverseString("hello"));
