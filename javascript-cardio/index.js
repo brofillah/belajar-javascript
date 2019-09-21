@@ -34,36 +34,47 @@ function reverseString(str) {
 
 // Huruf atau angka yang sama susunannya  yg dapat dibaca sama baik dari depan maupun belakang
 function isPalindrome(str) {
-  const revString = str.split('').reverse().join('')
+  const revString = str
+    .split("")
+    .reverse()
+    .join("");
   console.log(revString);
-  
 
-  return revString === str
+  return revString === str;
 }
 
 // membalikkan angka
 function reverseInt(int) {
-  const revString = int.toString().split('').reverse().join('')
+  const revString = int
+    .toString()
+    .split("")
+    .reverse()
+    .join("");
 
-  return parseInt(revString) * Math.sign(int)
+  return parseInt(revString) * Math.sign(int);
 }
 
 // Membuat huruf kapital di setiap awal kata
 function capitalizeLatters(str) {
-  const strArr = str.toLowerCase().split(' ')
+  // const strArr = str.toLowerCase().split(' ')
 
-  for (let i = 0; i < strArr.length; i++) {
-    strArr[i] = strArr[i].substring(0, 1).toUpperCase() + strArr[i].substring(1)
-  }
-  return strArr.join(' ')
+  // for (let i = 0; i < strArr.length; i++) {
+  //   strArr[i] = strArr[i].substring(0, 1).toUpperCase() + strArr[i].substring(1)
+  // }
+  // return strArr.join(' ')
+
+  ////////////////////////////////////////////////////////////////////
+
+  return str
+  .toLowerCase()
+  .split(" ")
+  .map(word => word[0].toUpperCase() + word.substr(1))
+  .join(' ')
+  
 }
-
-
-
 
 // console.log(reverseString("hello"));
 // console.log(isPalindrome('racecar'))
 // console.log(isPalindrome('hello'))
 // console.log(reverseInt(-521))
-console.log(capitalizeLatters('i love javascript'))
-
+console.log(capitalizeLatters("i love javascript"));
