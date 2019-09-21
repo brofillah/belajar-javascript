@@ -45,7 +45,17 @@ function isPalindrome(str) {
 function reverseInt(int) {
   const revString = int.toString().split('').reverse().join('')
 
-  return parseInt(revString)
+  return parseInt(revString) * Math.sign(int)
+}
+
+// Membuat huruf kapital di setiap awal kata
+function capitalizeLatters(str) {
+  const strArr = str.toLowerCase().split(' ')
+
+  for (let i = 0; i < strArr.length; i++) {
+    strArr[i] = strArr[i].substring(0, 1).toUpperCase() + strArr[i].substring(1)
+  }
+  return strArr.join(' ')
 }
 
 
@@ -54,4 +64,6 @@ function reverseInt(int) {
 // console.log(reverseString("hello"));
 // console.log(isPalindrome('racecar'))
 // console.log(isPalindrome('hello'))
-console.log(reverseInt(521))
+// console.log(reverseInt(-521))
+console.log(capitalizeLatters('i love javascript'))
+
