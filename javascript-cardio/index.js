@@ -1,3 +1,4 @@
+// Membalikan huruf
 function reverseString(str) {
   // return str
   //   .split()
@@ -31,4 +32,19 @@ function reverseString(str) {
   return str.split("").reduce((revString, char) => char + revString, "");
 }
 
-console.log(reverseString("hello"));
+// Huruf atau angka yang sama susunannya  yg dapat dibaca sama baik dari depan maupun belakang
+function isPalindrome(str) {
+  const revString = str.split('').reverse().join('')
+  console.log(revString);
+  
+
+  return revString === str
+}
+
+
+
+
+// console.log(reverseString("hello"));
+console.log(isPalindrome('racecar'))
+console.log(isPalindrome('hello'))
+
